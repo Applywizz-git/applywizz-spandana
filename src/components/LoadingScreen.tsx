@@ -52,12 +52,12 @@ function DataNodes() {
           delay={index * 0.2}
         />
       ))}
-      
+
       {/* Central connecting hub */}
       <Torus args={[1.5, 0.1, 16, 100]} rotation={[Math.PI / 2, 0, 0]}>
         <meshStandardMaterial color="#6366f1" wireframe />
       </Torus>
-      
+
       {/* Rotating outer ring */}
       <group rotation-y={0}>
         <Torus args={[2.5, 0.05, 8, 50]}>
@@ -74,13 +74,13 @@ function LoadingScene() {
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      
+
       <DataNodes />
-      
-      <OrbitControls 
-        enableZoom={false} 
-        enablePan={false} 
-        autoRotate 
+
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        autoRotate
         autoRotateSpeed={2}
       />
     </>
@@ -94,10 +94,10 @@ interface LoadingScreenProps {
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [progress, setProgress] = useState(0);
   const [loadingText, setLoadingText] = useState("Initializing AI Systems...");
-  
+
   const loadingMessages = [
     "Initializing AI Systems...",
-    "Loading Neural Networks...", 
+    "Loading Neural Networks...",
     "Connecting to Cloud Infrastructure...",
     "Preparing Portfolio Experience...",
     "Almost Ready..."
@@ -107,13 +107,13 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
     const timer = setInterval(() => {
       setProgress(prev => {
         const newProgress = prev + Math.random() * 15;
-        
+
         // Update loading message based on progress
         const messageIndex = Math.floor((newProgress / 100) * loadingMessages.length);
         if (messageIndex < loadingMessages.length) {
           setLoadingText(loadingMessages[messageIndex]);
         }
-        
+
         if (newProgress >= 100) {
           clearInterval(timer);
           setTimeout(onComplete, 500);
@@ -142,9 +142,9 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         transition={{ delay: 0.5 }}
       >
         <h1 className="text-4xl font-display font-bold gradient-text mb-4">
-          Mahesh Ganneboina
+          Spandana Devarasetty
         </h1>
-        <p className="text-xl text-muted-foreground">Generative AI Engineer</p>
+        <p className="text-xl text-muted-foreground">Clinical Research Coordinator</p>
       </motion.div>
 
       {/* Progress Bar */}
@@ -153,7 +153,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           <span className="text-sm font-medium text-foreground">{loadingText}</span>
           <span className="text-sm text-muted-foreground">{Math.round(progress)}%</span>
         </div>
-        
+
         <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
           <motion.div
             className="h-full bg-gradient-primary rounded-full"
@@ -164,7 +164,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       </div>
 
       {/* Subtle hint */}
-      <motion.p 
+      <motion.p
         className="text-xs text-muted-foreground mt-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
