@@ -1,232 +1,211 @@
 export const personalInfo = {
-  name: "Mahesh Ganneboina",
-  title: "Generative AI Engineer",
-  location: "Clermont, FL",
-  phone: "+1 (813) 360-7716",
-  email: "Maheshganneboina3777@gmail.com",
-  linkedin: "https://www.linkedin.com/in/mahesh-gannebo/",
-  tagline: "Building Scalable Web Apps with Modern Tech",
-  rotatingKeywords: ["React", "AI/ML", "Cloud", "PyTorch", "RAG"],
-  summary: "Generative AI Engineer with 5+ years of experience developing LLM-powered applications, multimodal AI systems, and enterprise-scale data platforms. Specialized in RAG pipelines, agentic AI frameworks, and cloud-native ML solutions that enhance decision-making and enable enterprise AI adoption.",
+  name: "SPANDANA DEVARASETTY",
+  title: "Clinical Research Coordinator",
+  location: "Dayton, OH",
+  phone: "+1 (848) 308-9969",
+  email: "devarasettyspandana7@gmail.com",
+  linkedin: "https://www.linkedin.com/in/spandana-d-1a6484b2/",
+  tagline: "Managing Complex Clinical Trials with Precision and Compliance",
+  rotatingKeywords: ["Clinical Research", "ICH-GCP", "FDA Compliance", "Trial Management", "Patient Safety"],
+  summary: "Clinical Research Coordinator with 3+ years of experience managing Phase II-IV sponsor-led and investigator-initiated multicenter clinical trials across academic and independent research settings, supporting 5+ concurrent studies and 100+ patient visits annually. Experienced in IRB start-up, screening and enrollment log management, informed consent administration, AE/SAE reporting, investigational product accountability, and monitoring visit coordination in alignment with ICH-GCP, FDA regulations, 21 CFR Part 11, and HIPAA.",
 };
 
 export const stats = [
-  { label: "Years Experience", value: "5+", suffix: "" },
-  { label: "Projects Completed", value: "100", suffix: "+" },
-  { label: "Client Satisfaction", value: "100", suffix: "%" },
-  { label: "Technologies Mastered", value: "50", suffix: "+" },
+  { label: "Years Experience", value: "3+", suffix: "" },
+  { label: "Patient Visits", value: "120", suffix: "+" },
+  { label: "Studies Managed", value: "5", suffix: "+" },
+  { label: "Queries Resolved", value: "150", suffix: "+" },
 ];
 
 export const experience = [
   {
     id: 1,
-    company: "Liberty Mutual",
-    position: "AI & ML Engineer",
-    location: "FL",
-    duration: "Aug 2024 - Present",
-    description: "Designed RAG pipelines on AWS Kinesis, Snowflake, and Pinecone processing millions of daily iOS events, sustaining 99.9% uptime while powering real-time personalization across global markets.",
+    company: "American Clinical Research Institute, LLC",
+    position: "Clinical Research Coordinator",
+    location: "Dayton, OH",
+    duration: "Jan 2023 - Present",
+    description: "Coordinating 5+ concurrent Phase II-IV multicenter sponsor-led and investigator-initiated trials through structured OnCore CTMS tracking and Epic EMR screening workflows.",
     highlights: [
-      "Leveraged LangChain, GPT-4, and Hugging Face Transformers to auto-generate telemetry queries, cutting analyst SQL effort by 60%",
-      "Embedded PySpark workflows with Bayesian forecasting models, reducing event processing latency by 30%",
-      "Streamlined model experimentation by deploying feature stores in Snowflake with dbt and Airflow",
-      "Strengthened privacy framework with IAM controls, reducing unauthorized access incidents by 90%"
+      "Led informed consent and enrollment activities for 80+ participants resulting in zero consent-related audit findings",
+      "Managed IRB submissions, amendments, and continuing reviews, achieving first-cycle approval on majority submissions",
+      "Entered and validated clinical data in Medidata Rave and REDCap, closing 150+ data queries and reducing discrepancies by 30%",
+      "Maintained audit-ready eTMF and regulatory binders supporting multiple monitoring visits with zero critical observations",
+      "Oversaw investigational product accountability, temperature monitoring, and reconciliation with zero discrepancies"
     ],
-    technologies: ["AWS", "Snowflake", "Pinecone", "LangChain", "GPT-4", "PySpark", "Airflow", "dbt"]
+    technologies: ["Medidata Rave", "REDCap", "OnCore CTMS", "Epic EMR", "ICH-GCP", "21 CFR Part 11"]
   },
   {
     id: 2,
-    company: "Cognizant",
-    position: "Data Scientist - Machine Learning",
-    location: "India",
-    duration: "Sep 2018 - Oct 2021",
-    description: "Built real-time market intelligence pipelines processing 5TB+ daily trading data, delivering actionable insights for traders within milliseconds.",
+    company: "Wright State Physicians",
+    position: "Clinical Research Intern",
+    location: "Dayton, OH",
+    duration: "Jan 2024 - Mar 2024",
+    description: "Screened and pre-qualified potential participants in Epic EMR while validating clinical trial data through source data verification in REDCap.",
     highlights: [
-      "Integrated LLM-powered stress testing pipelines using GPT-4 alongside Scikit-learn models, improving forecast accuracy by 18%",
-      "Accelerated regulatory reporting by designing compliance-aligned ML workflows on GCP, reducing report generation time by 45%",
-      "Re-engineered legacy analytics notebooks in Databricks, reducing execution errors by 25%",
-      "Embedded row-level security and Cloud KMS encryption ensuring GDPR, SOX, and FINRA compliance"
+      "Improved visit adherence by 15% and enhanced enrollment accuracy through rigorous EMR screening",
+      "Reconciled medical records with CRFs in REDCap, resulting in zero unresolved discrepancies during monitoring",
+      "Processed and prepared biospecimens for shipment using IATA-compliant packaging and centrifugation",
+      "Updated regulatory binders and delegation logs following protocol amendments to reduce documentation gaps"
     ],
-    technologies: ["GCP", "BigQuery", "Databricks", "Kafka", "Spark", "Python", "SQL", "Jenkins"]
+    technologies: ["Epic EMR", "REDCap", "IATA Shipping", "Biospecimen Processing", "Source Data Verification"]
   },
   {
     id: 3,
-    company: "Cognizant",
-    position: "Data Analyst Intern",
-    location: "India", 
-    duration: "Aug 2017 - Sep 2018",
-    description: "Delivered interactive dashboards integrating SQL Server and Azure Synapse datasets, providing real-time KPI visibility and cutting reporting delays by 40%.",
+    company: "Episource Pvt. Ltd",
+    position: "Medical Coder",
+    location: "India",
+    duration: "May 2018 - Oct 2021",
+    description: "Delivered accurate ICD-10-CM, CPT, and HCC coding across inpatient and outpatient charts while sustaining 98% quality scores.",
     highlights: [
-      "Transitioned on-premise financial systems into Azure Synapse, scaling multi-terabyte datasets and lowering infrastructure costs by 35%",
-      "Applied Databricks with Delta Lake to curate streaming data, raising dataset freshness by 30%",
-      "Re-engineered SQL Server marts with advanced partitioning, reducing query run times by 35%",
-      "Automated ETL-to-analysis pipelines in SSIS with Python-based quality checks"
+      "Strengthened Medicare Part C and Part D risk adjustment accuracy, driving a 15% improvement in reimbursement precision",
+      "Decreased repeat compliance findings by 25% through structured internal chart reviews aligned with CMS guidelines",
+      "Increased HCC capture rates by 25% by initiating physician queries for incomplete diagnoses",
+      "Reduced recurring claim rejections by 18% after analyzing denial patterns in Excel dashboards"
     ],
-    technologies: ["Azure", "SQL Server", "Tableau", "Power BI", "Databricks", "SSIS", "Python", "Docker"]
+    technologies: ["ICD-10-CM", "CPT", "HCC Coding", "Medicare Risk Adjustment", "CMS Guidelines", "Excel"]
   }
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "AI-Driven Financial Forecasting Platform",
-    description: "Built comprehensive BI dashboards with GPT-4 generated executive summaries, increasing quarterly revenue forecast accuracy by 18%",
-    longDescription: "Enterprise-grade financial analytics platform that combines traditional forecasting models with generative AI insights.",
-    technologies: ["Power BI", "Snowflake", "GPT-4", "Prophet", "ARIMA", "LangChain", "Airflow"],
-    category: "AI/ML",
+    title: "Decentralized Clinical Trial (DCT) Implementation Model",
+    description: "Designed a hybrid clinical trial workflow integrating telehealth, remote eConsent, and ePRO data flow mapping to improve retention by 35%.",
+    longDescription: "A comprehensive model for executing trials outside traditional site settings, focusing on patient centricity and remote data integrity.",
+    technologies: ["REDCap", "Telehealth", "eConsent", "ePRO", "21 CFR Part 11", "Excel"],
+    category: "Clinical Operations",
     featured: true,
     metrics: {
-      "Accuracy Improvement": "18%",
-      "Workload Reduction": "40%",
-      "Processing Speed": "3x faster"
+      "Projected Retention": "35% Increase",
+      "Monitoring Costs": "20% Reduction",
+      "Data Integrity": "100% Compliant"
     }
   },
   {
     id: 2,
-    title: "Generative AI Customer Insights Assistant",
-    description: "LangChain + GPT-4 agent analyzing retail POS data, improving targeted campaign conversion effectiveness by 12%",
-    longDescription: "Intelligent retail analytics system that surfaces cross-sell and up-sell patterns using advanced vector databases and LLM reasoning.",
-    technologies: ["LangChain", "GPT-4", "Pinecone", "Tableau", "Vector DB", "Embeddings"],
-    category: "AI/ML",
+    title: "Risk-Based Monitoring Optimization",
+    description: "Developed a risk stratification framework categorizing study activities by data criticality and safety impact per ICH E6(R2).",
+    longDescription: "A strategic approach to monitoring that prioritizes resources based on the risk profile of study sites and data points.",
+    technologies: ["ICH E6(R2)", "Risk Analysis", "Trend Analysis", "Excel", "KPI Dashboard"],
+    category: "Quality Management",
     featured: true,
     metrics: {
-      "Conversion Rate": "+12%",
-      "Retrieval Accuracy": "60% improvement",
-      "Campaign Effectiveness": "2x better"
-    }
-  },
-  {
-    id: 3,
-    title: "Enterprise RAG Analytics Assistant",
-    description: "Natural language querying system for Snowflake data, scaling securely to 1,000+ enterprise users across departments",
-    longDescription: "Revolutionary data querying interface that enables executives to interact with complex datasets using natural language, eliminating the need for SQL expertise.",
-    technologies: ["GPT-4", "LangChain", "FAISS", "Snowflake", "Azure Functions", "Pinecone"],
-    category: "Enterprise AI",
-    featured: true,
-    metrics: {
-      "Users Served": "1,000+",
-      "Query Speed": "60% faster",
-      "Adoption Rate": "95%"
+      "Oversight Efficiency": "Improved",
+      "Early Signal Detection": "Enhanced",
+      "Protocol Deviations": "Reduced"
     }
   }
 ];
 
 export const skills = {
-  "AI & Machine Learning": [
-    { name: "PyTorch", level: 95, category: "Framework" },
-    { name: "TensorFlow", level: 90, category: "Framework" },
-    { name: "LangChain", level: 95, category: "LLM Framework" },
-    { name: "Hugging Face", level: 90, category: "Platform" },
-    { name: "OpenAI APIs", level: 95, category: "API" },
-    { name: "Vector Databases", level: 90, category: "Database" },
-    { name: "RAG Pipelines", level: 95, category: "Architecture" },
-    { name: "Fine-tuning", level: 85, category: "Technique" }
+  "Clinical Operations": [
+    { name: "Trial Coordination", level: 95, category: "Core" },
+    { name: "Informed Consent", level: 98, category: "Core" },
+    { name: "Patient Screening", level: 95, category: "Core" },
+    { name: "Protocol Implementation", level: 90, category: "Core" },
+    { name: "IRB Submissions", level: 85, category: "Regulatory" },
+    { name: "Audit Readiness", level: 90, category: "Regulatory" }
   ],
-  "Cloud & Infrastructure": [
-    { name: "AWS", level: 90, category: "Platform" },
-    { name: "Azure", level: 85, category: "Platform" },
-    { name: "GCP", level: 80, category: "Platform" },
-    { name: "Docker", level: 85, category: "Container" },
-    { name: "Kubernetes", level: 80, category: "Orchestration" },
-    { name: "Terraform", level: 85, category: "IaC" },
-    { name: "Jenkins", level: 80, category: "CI/CD" },
-    { name: "MLflow", level: 85, category: "MLOps" }
+  "Regulatory & Compliance": [
+    { name: "ICH-GCP (E6 R2)", level: 98, category: "Compliance" },
+    { name: "FDA Regulations", level: 95, category: "Compliance" },
+    { name: "21 CFR Part 11", level: 90, category: "Compliance" },
+    { name: "HIPAA", level: 95, category: "Compliance" },
+    { name: "eTMF Management", level: 90, category: "Systems" },
+    { name: "ISF Maintenance", level: 90, category: "Systems" }
   ],
-  "Data Engineering": [
-    { name: "PySpark", level: 95, category: "Framework" },
-    { name: "Kafka", level: 85, category: "Streaming" },
-    { name: "Airflow", level: 90, category: "Orchestration" },
-    { name: "Snowflake", level: 90, category: "Warehouse" },
-    { name: "BigQuery", level: 85, category: "Warehouse" },
-    { name: "Databricks", level: 90, category: "Platform" },
-    { name: "Delta Lake", level: 85, category: "Storage" },
-    { name: "dbt", level: 80, category: "Transform" }
+  "Clinical Data Systems": [
+    { name: "Medidata Rave", level: 90, category: "EDC" },
+    { name: "REDCap", level: 95, category: "EDC/Research" },
+    { name: "OnCore CTMS", level: 85, category: "Management" },
+    { name: "Epic EMR", level: 92, category: "Systems" },
+    { name: "Source Data Verification", level: 95, category: "Monitoring" },
+    { name: "Query Resolution", level: 95, category: "Monitoring" }
   ],
-  "Programming & Tools": [
-    { name: "Python", level: 95, category: "Language" },
-    { name: "SQL", level: 90, category: "Language" },
-    { name: "JavaScript", level: 75, category: "Language" },
-    { name: "Git", level: 85, category: "Version Control" },
-    { name: "Power BI", level: 85, category: "Visualization" },
-    { name: "Tableau", level: 80, category: "Visualization" },
-    { name: "Jupyter", level: 90, category: "Development" },
-    { name: "VS Code", level: 85, category: "IDE" }
+  "Safety & Specialized": [
+    { name: "AE/SAE Reporting", level: 95, category: "Safety" },
+    { name: "IP Accountability", level: 92, category: "Investigational Product" },
+    { name: "IATA Laboratory Shipping", level: 90, category: "Specimen" },
+    { name: "Temperature Monitoring", level: 95, category: "Logistics" },
+    { name: "C-SSRS", level: 90, category: "Assessment" },
+    { name: "Biospecimen Processing", level: 88, category: "Laboratory" }
   ]
 };
 
 export const certifications = [
   {
     id: 1,
-    name: "Generative AI with Large Language Models",
-    issuer: "Coursera",
+    name: "Human Subjects Research (Biomedical Research)",
+    issuer: "CITI Program",
     date: "2024",
-    credentialId: "coursera-genai-2024",
-    verifyUrl: "https://coursera.org/verify/",
-    icon: "🤖"
-  },
-  {
-    id: 2,
-    name: "Machine Learning Specialization", 
-    issuer: "Coursera",
-    date: "2023",
-    credentialId: "coursera-ml-2023",
-    verifyUrl: "https://coursera.org/verify/",
-    icon: "🧠"
-  },
-  {
-    id: 3,
-    name: "IBM AI Engineering Professional Certificate",
-    issuer: "Coursera",
-    date: "2023", 
-    credentialId: "ibm-ai-2023",
-    verifyUrl: "https://coursera.org/verify/",
+    credentialId: "CITI-HSR",
+    verifyUrl: "#",
     icon: "🔬"
   },
   {
-    id: 4,
-    name: "AWS Generative AI Essentials",
-    issuer: "Coursera",
+    id: 2,
+    name: "Good Clinical Practice (ICH-GCP)",
+    issuer: "NIDA/CITI",
     date: "2024",
-    credentialId: "aws-genai-2024", 
-    verifyUrl: "https://coursera.org/verify/",
-    icon: "☁️"
+    credentialId: "GCP-ICH",
+    verifyUrl: "#",
+    icon: "✅"
+  },
+  {
+    id: 3,
+    name: "Ethics & Human Subject Protection",
+    issuer: "ACRP",
+    date: "2023",
+    credentialId: "ACRP-EHSP",
+    verifyUrl: "#",
+    icon: "🤝"
+  },
+  {
+    id: 4,
+    name: "IATA Laboratory Shipping Certification",
+    issuer: "IATA",
+    date: "2024",
+    credentialId: "IATA-SHIP",
+    verifyUrl: "#",
+    icon: "✈️"
   },
   {
     id: 5,
-    name: "Databricks Generative AI Fundamentals",
-    issuer: "Databricks Academy",
+    name: "Basic Life Support (BLS)",
+    issuer: "AHA",
     date: "2024",
-    credentialId: "databricks-genai-2024",
-    verifyUrl: "https://databricks.com/verify/",
-    icon: "📊"
+    credentialId: "BLS-CERT",
+    verifyUrl: "#",
+    icon: "❤️"
   },
   {
     id: 6,
-    name: "Applied Data Science with Python",
-    issuer: "Coursera", 
-    date: "2022",
-    credentialId: "coursera-python-2022",
-    verifyUrl: "https://coursera.org/verify/",
-    icon: "🐍"
+    name: "OSHA Bloodborne Pathogens",
+    issuer: "OSHA",
+    date: "2023",
+    credentialId: "OSHA-BBP",
+    verifyUrl: "#",
+    icon: "🩸"
   }
 ];
 
 export const education = [
   {
     id: 1,
-    degree: "Masters in Computer Science & Information Systems",
-    school: "Saint Leo University",
-    location: "Tampa, FL, USA", 
-    year: "2023",
-    gpa: "3.8/4.0",
-    coursework: ["Advanced AI Systems", "Data Mining", "Cloud Architecture", "Cybersecurity"]
+    degree: "Master of Science in Pharmacology & Toxicology",
+    school: "Wright State University",
+    location: "Dayton, OH",
+    year: "2024",
+    gpa: "3.9/4.0",
+    coursework: ["Advanced Pharmacology", "Toxicology Principles", "Clinical Trials Methodology", "Regulatory Affairs"]
   },
   {
     id: 2,
-    degree: "Bachelors in Computer Science",
-    school: "Sabarmati University", 
-    location: "Ahmedabad, Gujarat, India",
+    degree: "Bachelor of Pharmacy",
+    school: "Acharya Nagarjuna University",
+    location: "India",
     year: "2018",
-    gpa: "3.6/4.0", 
-    coursework: ["Data Structures", "Algorithms", "Database Systems", "Software Engineering"]
+    gpa: "8.5/10",
+    coursework: ["Pharmaceutics", "Pharmacology", "Medicinal Chemistry", "Pharmaceutical Analysis"]
   }
 ];

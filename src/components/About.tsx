@@ -40,10 +40,10 @@ export default function About() {
   };
 
   const skills = [
-    { name: "Generative AI", level: 95 },
-    { name: "Cloud Architecture", level: 90 },
-    { name: "Data Engineering", level: 85 },
-    { name: "Machine Learning", level: 90 },
+    { name: "Clinical Trial Coordination", level: 95 },
+    { name: "Regulatory Compliance", level: 98 },
+    { name: "Clinical Data Management", level: 92 },
+    { name: "Patient Safety & Enrollment", level: 95 },
   ];
 
   const values = [
@@ -85,12 +85,12 @@ export default function About() {
               About Me
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Transforming businesses through intelligent automation and cutting-edge AI solutions
+              Advancing clinical research through rigorous trial management and regulatory excellence
             </p>
           </motion.div>
 
           {/* Stats Section */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           >
@@ -103,8 +103,8 @@ export default function About() {
               >
                 <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                   {isInView && (
-                    <AnimatedCounter 
-                      end={parseInt(stat.value)} 
+                    <AnimatedCounter
+                      end={parseInt(stat.value)}
                       suffix={stat.suffix}
                       duration={2 + index * 0.2}
                     />
@@ -122,26 +122,27 @@ export default function About() {
             {/* About Text */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-display font-semibold mb-4">
-                Generative AI Engineer & Cloud Architect
+                Clinical Research Coordinator
               </h3>
-              
+
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                 <p className="leading-relaxed">
-                  With over 5 years of experience in developing LLM-powered applications and enterprise-scale data platforms, 
-                  I specialize in building intelligent systems that drive real business value. My expertise spans across 
-                  finance, technology, and consulting domains, where I've successfully delivered AI-driven platforms that 
-                  reduce costs and optimize decision-making processes.
+                  With over 3 years of experience in managing Phase II-IV multicenter clinical trials,
+                  I specialize in ensuring protocol compliance, patient safety, and high-quality data collection.
+                  My expertise spans across academic and independent research settings, where I've successfully
+                  supported concurrent studies and optimized enrollment workflows.
                 </p>
-                
+
                 <p className="leading-relaxed">
-                  I'm passionate about retrieval-augmented generation (RAG), agentic AI frameworks, and vector databases, 
-                  creating solutions that deliver real-time insights, personalization, and conversational analytics. 
-                  My work focuses on making AI accessible and practical for enterprise adoption.
+                  I am proficient in leveraging clinical data systems like Medidata Rave, REDCap, and OnCore CTMS
+                  to streamline research operations. My focus is on maintaining audit-ready documentation and
+                  fostering strong collaborations between sites, sponsors, and IRBs to accelerate clinical discovery.
                 </p>
-                
+
                 <p className="leading-relaxed">
-                  Currently pursuing a Doctor of Business Administration to strengthen my leadership and strategic 
-                  decision-making expertise, complementing my technical skills with business acumen.
+                  Holding a Master of Science in Pharmacology & Toxicology, I combine deep scientific knowledge
+                  with practical operational expertise to navigate the complex regulatory landscape of
+                  modern clinical research.
                 </p>
               </div>
 
@@ -178,7 +179,7 @@ export default function About() {
               <h3 className="text-2xl font-display font-semibold mb-6">
                 Values & Approach
               </h3>
-              
+
               <div className="space-y-4">
                 {values.map((value, index) => (
                   <motion.div

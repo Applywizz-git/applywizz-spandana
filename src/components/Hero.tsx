@@ -2,7 +2,7 @@ import { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float, Text, Sphere, Box, Torus, Ring } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import { Download, Play, Github, Linkedin, Mail } from 'lucide-react';
+import { Download, Play, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 import profilePhoto from '../assets/profile-pic.jpeg';
 
@@ -12,9 +12,9 @@ function AIVisualization() {
       {/* Central Brain/Chip */}
       <Float speed={2} rotationIntensity={0.3} floatIntensity={0.2}>
         <Box args={[1, 0.1, 1]} position={[0, 0, 0]}>
-          <meshStandardMaterial 
-            color="#3b82f6" 
-            emissive="#1e40af" 
+          <meshStandardMaterial
+            color="#3b82f6"
+            emissive="#1e40af"
             emissiveIntensity={0.2}
             metalness={0.8}
             roughness={0.2}
@@ -28,17 +28,17 @@ function AIVisualization() {
         const radius = 2;
         return (
           <Float key={i} speed={1 + i * 0.1} rotationIntensity={0.5}>
-            <Sphere 
-              args={[0.1, 16, 16]} 
+            <Sphere
+              args={[0.1, 16, 16]}
               position={[
                 Math.cos(angle) * radius,
                 Math.sin(angle * 0.5) * 0.5,
                 Math.sin(angle) * radius
               ]}
             >
-              <meshStandardMaterial 
-                color="#10b981" 
-                emissive="#059669" 
+              <meshStandardMaterial
+                color="#10b981"
+                emissive="#059669"
                 emissiveIntensity={0.3}
               />
             </Sphere>
@@ -49,21 +49,21 @@ function AIVisualization() {
       {/* Orbiting Data Rings */}
       <group rotation-y={0}>
         <Ring args={[1.5, 1.7, 32]} rotation={[Math.PI / 2, 0, 0]}>
-          <meshStandardMaterial 
-            color="#8b5cf6" 
-            transparent 
+          <meshStandardMaterial
+            color="#8b5cf6"
+            transparent
             opacity={0.6}
             emissive="#7c3aed"
             emissiveIntensity={0.1}
           />
         </Ring>
       </group>
-      
+
       <group rotation-y={Math.PI / 4}>
         <Ring args={[2.2, 2.4, 32]} rotation={[Math.PI / 3, 0, 0]}>
-          <meshStandardMaterial 
-            color="#f59e0b" 
-            transparent 
+          <meshStandardMaterial
+            color="#f59e0b"
+            transparent
             opacity={0.4}
             emissive="#d97706"
             emissiveIntensity={0.1}
@@ -81,13 +81,13 @@ function HeroScene() {
       <pointLight position={[10, 10, 10]} intensity={0.8} color="#3b82f6" />
       <pointLight position={[-10, -10, -10]} intensity={0.5} color="#10b981" />
       <directionalLight position={[0, 5, 5]} intensity={0.4} />
-      
+
       <AIVisualization />
-      
-      <OrbitControls 
-        enableZoom={false} 
-        enablePan={false} 
-        autoRotate 
+
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        autoRotate
         autoRotateSpeed={1}
         maxPolarAngle={Math.PI / 1.8}
         minPolarAngle={Math.PI / 3}
@@ -100,23 +100,23 @@ function TypewriterText() {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
+
   const rotatingWords = personalInfo.rotatingKeywords;
-  const baseText = "Building Scalable Apps with ";
+  const baseText = "Expert in ";
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       const currentWord = rotatingWords[currentIndex];
-      
+
       if (!isDeleting) {
         setCurrentText(baseText + currentWord.substring(0, currentText.length - baseText.length + 1));
-        
+
         if (currentText === baseText + currentWord) {
           setTimeout(() => setIsDeleting(true), 2000);
         }
       } else {
         setCurrentText(baseText + currentWord.substring(0, currentText.length - baseText.length - 1));
-        
+
         if (currentText === baseText) {
           setIsDeleting(false);
           setCurrentIndex((prev) => (prev + 1) % rotatingWords.length);
@@ -151,7 +151,7 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-surface to-muted -z-10" />
-      
+
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden -z-5">
         {Array.from({ length: 20 }).map((_, i) => (
@@ -204,7 +204,7 @@ export default function Hero() {
                 Hi, I'm{' '}
                 <span className="gradient-text">{personalInfo.name.split(' ')[0]}</span>
               </motion.div>
-              
+
               <motion.div
                 className="text-2xl md:text-4xl mt-2 h-16 flex items-center"
                 initial={{ opacity: 0 }}
@@ -270,7 +270,7 @@ export default function Hero() {
               >
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </motion.a>
-           
+
               <motion.a
                 href={`mailto:${personalInfo.email}`}
                 className="p-3 rounded-full bg-muted/50 hover:bg-primary/10 transition-all duration-300 group"
@@ -303,7 +303,7 @@ export default function Hero() {
                   loading="lazy"
                 />
               </motion.div>
-              
+
               {/* Floating Border */}
               {/* <motion.div
                 className="absolute inset-0 rounded-2xl border-2 border-primary/30"
@@ -314,8 +314,8 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               /> */}
             </div>
-                  {/* 3D Canvas */}
-                  {/* <div className="h-80 w-full">
+            {/* 3D Canvas */}
+            {/* <div className="h-80 w-full">
                     <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
                       <Suspense fallback={null}>
                         <HeroScene />

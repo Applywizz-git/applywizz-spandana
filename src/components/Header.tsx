@@ -22,7 +22,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Update active section based on scroll position
       const sections = navigation.map(nav => nav.href.substring(1));
       for (const section of sections) {
@@ -61,7 +61,7 @@ export default function Header() {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
+
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -70,11 +70,10 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled 
-            ? 'glass backdrop-blur-md shadow-lg' 
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+            ? 'glass backdrop-blur-md shadow-lg'
             : 'bg-transparent'
-        }`}
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -88,7 +87,7 @@ export default function Header() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              MG
+              SD
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -97,11 +96,10 @@ export default function Header() {
                 <motion.button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`relative text-sm font-medium transition-colors duration-300 hover:text-primary ${
-                    activeSection === item.href.substring(1)
+                  className={`relative text-sm font-medium transition-colors duration-300 hover:text-primary ${activeSection === item.href.substring(1)
                       ? 'text-primary'
                       : 'text-foreground'
-                  }`}
+                    }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index }}
@@ -124,7 +122,7 @@ export default function Header() {
             {/* Theme Toggle & Mobile Menu Button */}
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              
+
               {/* Mobile menu button */}
               <motion.button
                 className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
@@ -154,11 +152,11 @@ export default function Header() {
             transition={{ duration: 0.3 }}
           >
             {/* Backdrop */}
-            <div 
+            <div
               className="absolute inset-0 bg-background/95 backdrop-blur-md"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            
+
             {/* Menu Content */}
             <motion.div
               className="absolute top-20 left-6 right-6 glass rounded-2xl p-6"
@@ -172,11 +170,10 @@ export default function Header() {
                   <motion.button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
-                    className={`block w-full text-left py-3 px-4 rounded-xl text-lg font-medium transition-all duration-200 ${
-                      activeSection === item.href.substring(1)
+                    className={`block w-full text-left py-3 px-4 rounded-xl text-lg font-medium transition-all duration-200 ${activeSection === item.href.substring(1)
                         ? 'bg-gradient-primary text-white shadow-md'
                         : 'text-foreground hover:bg-muted'
-                    }`}
+                      }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 * index }}

@@ -2,7 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
-import { ExternalLink, Github, TrendingUp, Users, Zap } from 'lucide-react';
+import { ExternalLink, TrendingUp, Users, Zap } from 'lucide-react';
 import { projects } from '../data/portfolio';
 
 // Import Swiper styles
@@ -12,20 +12,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
 // Import project images
-import projectFinancial from '../assets/project-financial-forecasting.jpg';
-import projectCustomer from '../assets/project-customer-insights.jpg';
-import projectRAG from '../assets/project-rag-assistant.jpg';
-import projectMarket from '../assets/project-market-intelligence.jpg';
-import projectCompliance from '../assets/project-compliance-ml.jpg';
-import projectDashboards from '../assets/project-executive-dashboards.jpg';
+import projectDCT from '../assets/project-clinical-trial-dct.png';
+import projectMonitoring from '../assets/project-risk-monitoring.png';
 
 const projectImages = {
-  1: projectFinancial,
-  2: projectCustomer, 
-  3: projectRAG,
-  4: projectMarket,
-  5: projectCompliance,
-  6: projectDashboards,
+  1: projectDCT,
+  2: projectMonitoring,
 };
 
 export default function Projects() {
@@ -121,14 +113,14 @@ export default function Projects() {
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      
+
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4">
                         <span className="px-3 py-1 bg-primary/90 text-white text-xs font-medium rounded-full backdrop-blur-sm">
                           {project.category}
                         </span>
                       </div>
-                      
+
                       {/* Featured Badge */}
                       {project.featured && (
                         <div className="absolute top-4 right-4">
@@ -144,7 +136,7 @@ export default function Projects() {
                       <h3 className="text-xl font-display font-bold text-foreground group-hover:text-primary transition-colors">
                         {project.title}
                       </h3>
-                      
+
                       <p className="text-muted-foreground leading-relaxed text-sm">
                         {project.description}
                       </p>
@@ -178,7 +170,7 @@ export default function Projects() {
                           </span>
                         ))}
                       </div>
-                    
+
                     </div>
                   </motion.div>
                 </SwiperSlide>
@@ -187,7 +179,7 @@ export default function Projects() {
           </motion.div>
 
           {/* Project Stats */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="grid grid-cols-2 md:grid-cols-4 gap-6"
           >

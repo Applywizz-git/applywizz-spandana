@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowUp, Heart } from 'lucide-react';
+import { Linkedin, Mail, ArrowUp, Heart } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 export default function Footer() {
@@ -49,10 +49,10 @@ export default function Footer() {
               {personalInfo.name}
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Generative AI Engineer specializing in enterprise-scale data platforms, 
-              LLM-powered applications, and intelligent automation solutions.
+              Clinical Research Coordinator specializing in Phase II-IV trials,
+              regulatory compliance, and clinical data management for multicenter studies.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -120,7 +120,7 @@ export default function Footer() {
                 {personalInfo.email}
               </p>
             </div>
-            
+
             <div className="mt-4 p-3 bg-success/10 border border-success/20 rounded-lg">
               <div className="flex items-center gap-2 text-success text-sm">
                 <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
