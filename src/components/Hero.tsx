@@ -226,16 +226,16 @@ export default function Hero() {
 
             {/* Action Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="flex flex-col sm:flex-row gap-4 mb-8 relative z-20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 }}
             >
               <motion.button
                 onClick={scrollToProjects}
-                className="btn-primary group inline-flex items-center gap-3"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="btn-primary group inline-flex items-center gap-3 cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Play className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 View My Work
@@ -243,10 +243,10 @@ export default function Hero() {
 
               <motion.a
                 href="/resume.pdf"
-                download
-                className="btn-secondary inline-flex items-center gap-3"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                download="RESUME_SPANDANA_DEVARASETTY_CRC.pdf"
+                className="btn-secondary inline-flex items-center gap-3 cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Download className="w-5 h-5" />
                 Download Resume

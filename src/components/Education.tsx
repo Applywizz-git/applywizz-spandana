@@ -43,7 +43,7 @@ export default function Education() {
               Education
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Academic foundation in computer science and advanced business administration
+              Academic foundation in pharmacology, toxicology, and pharmaceutical sciences
             </p>
           </motion.div>
 
@@ -76,7 +76,7 @@ export default function Education() {
                           {edu.school}
                         </p>
                       </div>
-                      
+
                       <div className="text-sm text-muted-foreground space-y-1">
                         <div className="flex items-center gap-2">
                           <Calendar className="w-4 h-4" />
@@ -130,12 +130,12 @@ export default function Education() {
           >
             <div className="glass p-8 rounded-2xl">
               <h3 className="text-xl font-display font-bold mb-4 gradient-text">
-                Continuous Learning
+                Commitment to Research Excellence
               </h3>
               <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Currently pursuing a Doctor of Business Administration to strengthen leadership 
-                and strategic decision-making expertise, complementing advanced technical skills 
-                with comprehensive business acumen for enterprise-level AI implementations.
+                Dedicated to advancing medical science through meticulous protocol implementation,
+                adherence to regulatory standards, and continuous professional development in
+                clinical trial management and public health.
               </p>
             </div>
           </motion.div>

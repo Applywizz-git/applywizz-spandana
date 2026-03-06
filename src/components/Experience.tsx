@@ -47,7 +47,7 @@ export default function Experience() {
           className="max-w-6xl mx-auto"
         >
           {/* Section Header */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="text-center mb-16"
           >
@@ -55,7 +55,7 @@ export default function Experience() {
               Professional Experience
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Building enterprise AI solutions across finance, technology, and data platforms
+              Managing multicenter clinical trials with focus on ICH-GCP, patient safety, and data integrity
             </p>
           </motion.div>
 
@@ -67,23 +67,21 @@ export default function Experience() {
             {experience.map((exp, index) => {
               const isEven = index % 2 === 0;
               const variants = isEven ? itemVariants : itemVariantsRight;
-              
+
               return (
                 <motion.div
                   key={exp.id}
                   variants={variants}
-                  className={`relative flex items-center mb-16 ${
-                    isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  className={`relative flex items-center mb-16 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
                 >
                   {/* Timeline Dot */}
                   <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-primary rounded-full border-4 border-background shadow-lg z-10" />
 
                   {/* Content Card */}
                   <motion.div
-                    className={`glass-card w-full md:w-5/12 ${
-                      isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                    }`}
+                    className={`glass-card w-full md:w-5/12 ${isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
+                      }`}
                     whileHover={{ scale: 1.02, y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >

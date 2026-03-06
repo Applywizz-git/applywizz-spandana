@@ -34,11 +34,11 @@ function SkillOrb({ position, color, text, delay }: SkillOrbProps) {
 
 function DataNodes() {
   const skills = [
-    { text: "AI/ML", color: "#3b82f6", position: [-2, 1, 0] as [number, number, number] },
-    { text: "PyTorch", color: "#10b981", position: [2, 0.5, -1] as [number, number, number] },
-    { text: "AWS", color: "#f59e0b", position: [0, -1, 1] as [number, number, number] },
-    { text: "React", color: "#ef4444", position: [-1.5, -0.5, -1] as [number, number, number] },
-    { text: "Python", color: "#8b5cf6", position: [1, 1.5, 0] as [number, number, number] },
+    { text: "ICH-GCP", color: "#3b82f6", position: [-2, 1, 0] as [number, number, number] },
+    { text: "FDA Regs", color: "#10b981", position: [2, 0.5, -1] as [number, number, number] },
+    { text: "CTMS", color: "#f59e0b", position: [0, -1, 1] as [number, number, number] },
+    { text: "IRB", color: "#ef4444", position: [-1.5, -0.5, -1] as [number, number, number] },
+    { text: "EDC", color: "#8b5cf6", position: [1, 1.5, 0] as [number, number, number] },
   ];
 
   return (
@@ -93,14 +93,14 @@ interface LoadingScreenProps {
 
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [progress, setProgress] = useState(0);
-  const [loadingText, setLoadingText] = useState("Initializing AI Systems...");
+  const [loadingText, setLoadingText] = useState("Initializing Research Systems...");
 
   const loadingMessages = [
-    "Initializing AI Systems...",
-    "Loading Neural Networks...",
-    "Connecting to Cloud Infrastructure...",
+    "Initializing Research Systems...",
+    "Verifying GCP Compliance...",
+    "Syncing Trial Databases...",
     "Preparing Portfolio Experience...",
-    "Almost Ready..."
+    "Calibration Complete..."
   ];
 
   useEffect(() => {

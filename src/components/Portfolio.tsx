@@ -35,9 +35,8 @@ export default function Portfolio() {
         // Preload critical images
         const imageUrls = [
           '/src/assets/profile-pic.jpeg',
-          '/src/assets/project-financial-forecasting.jpg',
-          '/src/assets/project-customer-insights.jpg',
-          '/src/assets/project-rag-assistant.jpg',
+          '/src/assets/project-clinical-trial-dct.png',
+          '/src/assets/project-risk-monitoring.png',
         ];
 
         const imagePromises = imageUrls.map((url) => {
@@ -50,10 +49,10 @@ export default function Portfolio() {
         });
 
         await Promise.allSettled(imagePromises);
-        
+
         // Minimum loading time for smooth UX
         await new Promise(resolve => setTimeout(resolve, 3000));
-        
+
       } catch (error) {
         console.warn('Asset preloading failed:', error);
       }
@@ -75,33 +74,33 @@ export default function Portfolio() {
           ) : (
             <div key="portfolio" className="portfolio-content">
               <Header />
-              
+
               <main>
                 {/* Hero Section */}
                 <Hero />
-                
+
                 {/* About Section */}
                 <About />
-                
+
                 {/* Experience Section */}
                 <Experience />
-                
+
                 {/* Projects Section */}
                 <Projects />
-                
+
                 {/* Skills Section */}
                 <Skills />
-                
+
                 {/* Certifications Section */}
                 <Certifications />
-                
+
                 {/* Education Section */}
                 <Education />
-                
+
                 {/* Contact Section */}
                 <Contact />
               </main>
-              
+
               <Footer />
             </div>
           )}
