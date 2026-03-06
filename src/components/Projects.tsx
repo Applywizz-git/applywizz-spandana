@@ -66,12 +66,12 @@ export default function Projects() {
               Featured Projects
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Innovative AI solutions delivering real business value across enterprise platforms
+              Showcasing key initiatives in clinical trial optimization, regulatory adherence, and research data integrity.
             </p>
           </motion.div>
 
           {/* Projects Carousel */}
-          <motion.div variants={itemVariants} className="mb-16">
+          <motion.div variants={itemVariants} className="mb-8">
             <Swiper
               modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
               spaceBetween={30}
@@ -144,7 +144,7 @@ export default function Projects() {
                       {/* Metrics */}
                       {project.metrics && (
                         <div className="grid grid-cols-2 gap-3">
-                          {Object.entries(project.metrics).slice(0, 2).map(([key, value], index) => {
+                          {Object.entries(project.metrics).slice(0, 2).map(([key, value]) => {
                             const IconComponent = getMetricIcon(key);
                             return (
                               <div key={key} className="flex items-center gap-2 p-2 bg-muted/50 rounded-lg">
@@ -176,35 +176,6 @@ export default function Projects() {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </motion.div>
-
-          {/* Project Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
-          >
-            {[
-              { label: "Projects Completed", value: "50+" },
-              { label: "Technologies Used", value: "25+" },
-              { label: "Client Satisfaction", value: "100%" },
-              { label: "Years Experience", value: "5+" },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="glass text-center p-6 rounded-xl"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 1 + index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="text-2xl font-bold gradient-text mb-2">
-                  {stat.value}
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
           </motion.div>
         </motion.div>
       </div>

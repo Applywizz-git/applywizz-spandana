@@ -135,11 +135,9 @@ export const skills = {
 export const certifications = [
   {
     id: 1,
-    name: "Human Subjects Research (Biomedical Research)",
+    name: "CITI Program - Human Subjects Research (Biomedical Research)",
     issuer: "CITI Program",
     date: "2024",
-    credentialId: "CITI-HSR",
-    verifyUrl: "#",
     icon: "🔬"
   },
   {
@@ -147,44 +145,41 @@ export const certifications = [
     name: "Good Clinical Practice (ICH-GCP)",
     issuer: "NIDA/CITI",
     date: "2024",
-    credentialId: "GCP-ICH",
-    verifyUrl: "#",
     icon: "✅"
   },
   {
     id: 3,
-    name: "Ethics & Human Subject Protection",
+    name: "ACRP - Ethics & Human Subject Protection",
     issuer: "ACRP",
     date: "2023",
-    credentialId: "ACRP-EHSP",
-    verifyUrl: "#",
     icon: "🤝"
   },
   {
     id: 4,
-    name: "IATA Laboratory Shipping Certification",
-    issuer: "IATA",
-    date: "2024",
-    credentialId: "IATA-SHIP",
-    verifyUrl: "#",
-    icon: "✈️"
-  },
-  {
-    id: 5,
     name: "Basic Life Support (BLS)",
     issuer: "AHA",
     date: "2024",
-    credentialId: "BLS-CERT",
-    verifyUrl: "#",
     icon: "❤️"
   },
   {
+    id: 5,
+    name: "Columbia Suicide Severity Rating Scale (C-SSRS)",
+    issuer: "Columbia University",
+    date: "2023",
+    icon: "🧠"
+  },
+  {
     id: 6,
+    name: "IATA Laboratory Shipping Certification",
+    issuer: "IATA",
+    date: "2024",
+    icon: "✈️"
+  },
+  {
+    id: 7,
     name: "OSHA Bloodborne Pathogens",
     issuer: "OSHA",
     date: "2023",
-    credentialId: "OSHA-BBP",
-    verifyUrl: "#",
     icon: "🩸"
   }
 ];

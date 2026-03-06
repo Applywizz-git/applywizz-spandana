@@ -92,17 +92,6 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Greeting */}
-            <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border/50 mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-              <span className="text-sm font-medium">Available for opportunities</span>
-            </motion.div>
-
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

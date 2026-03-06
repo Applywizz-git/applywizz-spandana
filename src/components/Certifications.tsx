@@ -1,6 +1,5 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Award, Calendar } from 'lucide-react';
 import { certifications } from '../data/portfolio';
 
 export default function Certifications() {
@@ -43,13 +42,13 @@ export default function Certifications() {
               Certifications
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Validated expertise in cutting-edge AI, machine learning, and cloud technologies
+              Validated credentials in clinical research operations, human protection, and GCP compliance.
             </p>
           </motion.div>
 
           {/* Certifications Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
+            {certifications.map((cert) => (
               <motion.div
                 key={cert.id}
                 variants={itemVariants}
@@ -64,42 +63,19 @@ export default function Certifications() {
                         {cert.icon}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-display font-bold text-foreground mb-1 line-clamp-2">
+                        <h3 className="font-display font-bold text-foreground mb-1 line-clamp-2 text-sm md:text-base">
                           {cert.name}
                         </h3>
-                        <p className="text-primary font-semibold text-sm">
+                        <p className="text-primary font-semibold text-xs">
                           {cert.issuer}
                         </p>
                       </div>
                     </div>
-
-                  
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-
-          {/* Achievement Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            <div className="glass text-center p-6 rounded-xl">
-              <div className="text-3xl font-bold gradient-text mb-2">6+</div>
-              <p className="text-muted-foreground">Professional Certifications</p>
-            </div>
-            
-            <div className="glass text-center p-6 rounded-xl">
-              <div className="text-3xl font-bold gradient-text mb-2">4</div>
-              <p className="text-muted-foreground">Leading Platforms</p>
-            </div>
-            
-            <div className="glass text-center p-6 rounded-xl">
-              <div className="text-3xl font-bold gradient-text mb-2">2024</div>
-              <p className="text-muted-foreground">Latest Certification</p>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
