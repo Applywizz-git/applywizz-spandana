@@ -1,69 +1,5 @@
-import { Suspense, useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Text, Float, Sphere, Torus } from '@react-three/drei';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
-interface SkillOrbProps {
-  position: [number, number, number];
-  color: string;
-  text: string;
-  delay: number;
-}
-
-function SkillOrb({ position, color, text, delay }: SkillOrbProps) {
-  return (
-    <Float speed={1 + delay} rotationIntensity={0.5} floatIntensity={0.5}>
-      <group position={position}>
-        <Sphere args={[0.3, 32, 32]}>
-          <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.2} />
-        </Sphere>
-        <Text
-          position={[0, -0.5, 0]}
-          fontSize={0.15}
-          color="white"
-          anchorX="center"
-          anchorY="middle"
-        >
-          {text}
-        </Text>
-      </group>
-    </Float>
-  );
-}
-
-function DataNodes() {
-  const skills = [
-    { text: "ICH-GCP", color: "#3b82f6", position: [-2, 1, 0] as [number, number, number] },
-    { text: "FDA Regs", color: "#10b981", position: [2, 0.5, -1] as [number, number, number] },
-    { text: "CTMS", color: "#f59e0b", position: [0, -1, 1] as [number, number, number] },
-    { text: "IRB", color: "#ef4444", position: [-1.5, -0.5, -1] as [number, number, number] },
-    { text: "EDC", color: "#8b5cf6", position: [1, 1.5, 0] as [number, number, number] },
-  ];
-
-  return (
-    <group>
-      {skills.map((skill, index) => (
-        <SkillOrb
-          key={skill.text}
-          position={skill.position}
-          color={skill.color}
-          text={skill.text}
-          delay={index * 0.2}
-        />
-      ))}
-
-      <Torus args={[1.5, 0.1, 16, 100]} rotation={[Math.PI / 2, 0, 0]}>
-        <meshStandardMaterial color="#6366f1" wireframe />
-      </Torus>
-
-      <group rotation-y={0}>
-        <Torus args={[2.5, 0.05, 8, 50]}>
-          <meshStandardMaterial color="#06b6d4" emissive="#06b6d4" emissiveIntensity={0.3} />
-        </Torus>
-      </group>
-    </group>
-  );
-}
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -108,24 +44,22 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="absolute inset-0 z-0">
-        <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
-          <Suspense fallback={null}>
-            <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} intensity={1} />
-            <DataNodes />
-            <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
-          </Suspense>
-        </Canvas>
-      </div>
-
       <div className="relative z-10 flex flex-col items-center">
         <motion.div
-          className="text-center mb-8"
+          className="text-center mb-12"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.2 }}
         >
+          <div className="w-20 h-20 mb-8 mx-auto relative">
+            <div className="absolute inset-0 rounded-full border-4 border-primary/20"></div>
+            <motion.div
+              className="absolute inset-0 rounded-full border-4 border-primary border-t-transparent"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            ></motion.div>
+          </div>
+
           <h1 className="text-4xl font-display font-bold gradient-text mb-4">
             Spandana Devarasetty
           </h1>
@@ -150,7 +84,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
           className="text-xs text-muted-foreground mt-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
+          transition={{ delay: 1 }}
         >
           Crafting an immersive portfolio experience...
         </motion.p>

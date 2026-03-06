@@ -1,100 +1,8 @@
-import { Suspense, useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Float, Text, Sphere, Box, Torus, Ring } from '@react-three/drei';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Play, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 import profilePhoto from '../assets/profile-pic.jpeg';
-
-function AIVisualization() {
-  return (
-    <group>
-      {/* Central Brain/Chip */}
-      <Float speed={2} rotationIntensity={0.3} floatIntensity={0.2}>
-        <Box args={[1, 0.1, 1]} position={[0, 0, 0]}>
-          <meshStandardMaterial
-            color="#3b82f6"
-            emissive="#1e40af"
-            emissiveIntensity={0.2}
-            metalness={0.8}
-            roughness={0.2}
-          />
-        </Box>
-      </Float>
-
-      {/* Neural Connection Nodes */}
-      {Array.from({ length: 8 }).map((_, i) => {
-        const angle = (i * Math.PI * 2) / 8;
-        const radius = 2;
-        return (
-          <Float key={i} speed={1 + i * 0.1} rotationIntensity={0.5}>
-            <Sphere
-              args={[0.1, 16, 16]}
-              position={[
-                Math.cos(angle) * radius,
-                Math.sin(angle * 0.5) * 0.5,
-                Math.sin(angle) * radius
-              ]}
-            >
-              <meshStandardMaterial
-                color="#10b981"
-                emissive="#059669"
-                emissiveIntensity={0.3}
-              />
-            </Sphere>
-          </Float>
-        );
-      })}
-
-      {/* Orbiting Data Rings */}
-      <group rotation-y={0}>
-        <Ring args={[1.5, 1.7, 32]} rotation={[Math.PI / 2, 0, 0]}>
-          <meshStandardMaterial
-            color="#8b5cf6"
-            transparent
-            opacity={0.6}
-            emissive="#7c3aed"
-            emissiveIntensity={0.1}
-          />
-        </Ring>
-      </group>
-
-      <group rotation-y={Math.PI / 4}>
-        <Ring args={[2.2, 2.4, 32]} rotation={[Math.PI / 3, 0, 0]}>
-          <meshStandardMaterial
-            color="#f59e0b"
-            transparent
-            opacity={0.4}
-            emissive="#d97706"
-            emissiveIntensity={0.1}
-          />
-        </Ring>
-      </group>
-    </group>
-  );
-}
-
-function HeroScene() {
-  return (
-    <>
-      <ambientLight intensity={0.6} />
-      <pointLight position={[10, 10, 10]} intensity={0.8} color="#3b82f6" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#10b981" />
-      <directionalLight position={[0, 5, 5]} intensity={0.4} />
-
-      <AIVisualization />
-
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        autoRotate
-        autoRotateSpeed={1}
-        maxPolarAngle={Math.PI / 1.8}
-        minPolarAngle={Math.PI / 3}
-      />
-    </>
-  );
-}
 
 function TypewriterText() {
   const [currentText, setCurrentText] = useState('');
@@ -282,7 +190,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* 3D Visualization & Profile */}
+          {/* Profile Section */}
           <motion.div
             className="order-1 lg:order-2 relative"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -293,7 +201,7 @@ export default function Hero() {
             <div className="relative mb-6 flex justify-center">
               <motion.div
                 className="w-48 aspect-[3/4] md:w-80 rounded-2xl overflow-hidden shadow-hero border-4 border-border/20"
-                whileHover={{ scale: 1.3 }}
+                whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img
@@ -303,26 +211,7 @@ export default function Hero() {
                   loading="lazy"
                 />
               </motion.div>
-
-              {/* Floating Border */}
-              {/* <motion.div
-                className="absolute inset-0 rounded-2xl border-2 border-primary/30"
-                style={{ width: '110%', height: '110%', left: '-5%', top: '-5%' }}
-                animate={{ 
-                  borderColor: ["hsl(var(--primary)/0.3)", "hsl(var(--primary)/0.6)", "hsl(var(--primary)/0.3)"]
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              /> */}
             </div>
-            {/* 3D Canvas */}
-            {/* <div className="h-80 w-full">
-                    <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
-                      <Suspense fallback={null}>
-                        <HeroScene />
-                      </Suspense>
-                    </Canvas>
-                  </div> */}
-
           </motion.div>
         </div>
       </div>
